@@ -1,0 +1,22 @@
+{
+	"name": "Next.js App (Dev)",
+	"build": {
+	"dockerfile": "./Dockerfile"
+	},
+	"workspaceFolder": "/nextjs", // Dockerfile で WORKDIR を /nextjs にしているので合わせる
+	"forwardPorts": [3000],
+	"customizations": {
+	"vscode": {
+		"extensions": [
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint",
+		"ms-vscode.vscode-typescript-tslint-plugin",
+		"bradlc.vscode-tailwindcss"
+		// 必要に応じて他の拡張機能を追加
+		]
+	}
+	},
+	// コンテナ作成後の初期セットアップは Dockerfile で実行済み
+	// "postCreateCommand": "npm install",
+	"remoteUser": "node"
+}
